@@ -24,15 +24,8 @@ Certifique-se de ter o Python 3.x instalado em seu sistema.
 pip install matplotlib
 ````
 6. Após isso, inicie o codigo novamente.
-   
-## Contribuições
 
-Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões de melhorias, sinta-se à vontade para abrir um problema ou enviar um pull request.
-
-## Créditos
-
-Este programa foi desenvolvido por:
-
+## Créditos e integrantes
 - RM 98036 Henrique Pontes Olliveira
 - RM 98460 Felipe Capriotti da Silva Santos
 - RM 99679 Gustavo Kawamura Christofani
