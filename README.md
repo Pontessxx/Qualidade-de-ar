@@ -33,11 +33,11 @@ Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestõe
 
 Este programa foi desenvolvido por:
 
-RM 98036 Henrique Pontes Olliveira
-RM 98460 Felipe Capriotti da Silva Santos
-RM 99679 Gustavo Kawamura Christofani
-RM 550908 Vinicius Santos Yamashita de Farias
-RM 99874 Rafael Carvalho Mattos
+- RM 98036 Henrique Pontes Olliveira
+- RM 98460 Felipe Capriotti da Silva Santos
+- RM 99679 Gustavo Kawamura Christofani
+- RM 550908 Vinicius Santos Yamashita de Farias
+- RM 99874 Rafael Carvalho Mattos
 
 ## Licença
 
