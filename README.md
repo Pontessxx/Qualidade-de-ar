@@ -1,44 +1,57 @@
-# Analisador de Qualidade do Ar - AXION GREEN
+# Analisador de Qualidade do Ar - Axion Green
 
-## Descrição
-
-O Analisador de Qualidade do Ar - AXION GREEN é uma ferramenta que permite a análise e visualização da qualidade do ar e umidade do ar ao longo dos meses, além de oferecer funcionalidades como estimativa do mês em que a qualidade do ar atingirá um valor desejado.
+Bem-vindo ao Analisador de Qualidade do Ar, uma ferramenta desenvolvida pela Axion Green para ajudar a monitorar e analisar a qualidade do ar e a umidade em diferentes meses do ano. O programa permite a inserção de dados mensais, visualização de gráficos informativos e estimativa de meses com base em valores de qualidade desejados.
 
 ## Funcionalidades
 
-- Inserir os dados mensais de qualidade do ar e umidade.
-- Visualizar gráficos da qualidade do ar e umidade ao longo dos meses.
-- Ver gráficos combinados de qualidade do ar e umidade.
-- Estimar o mês em que a qualidade do ar atingirá um valor desejado.
-- Informar a região para obter detalhes do CEP.
-- Sair da aplicação.
+### 1. Inserir Dados Mensais
 
-## Estimativa do Mês com Base em Valor Desejado
+Você pode inserir os dados mensais de qualidade do ar e umidade utilizando o menu "Inserir Dados Mensais". Insira valores de 1 a 10 para a qualidade do ar e a umidade.
 
-Uma das funcionalidades do Analisador de Qualidade do Ar é a capacidade de estimar o mês em que a qualidade do ar atingirá um valor desejado. Essa estimativa é baseada na técnica de otimização conhecida como Método de Newton-Raphson.
+### 2. Visualizar Gráficos
 
-### Como Funciona
+O programa oferece diversos gráficos para visualizar os dados:
 
-A função `estimar_mes_valor(valor_desejado)` utiliza o Método de Newton-Raphson para encontrar uma aproximação do mês em que a qualidade do ar atingirá o valor desejado. A ideia por trás desse método é iterativamente refinar a estimativa inicial do mês, usando informações da derivada da função de qualidade do ar.
+- **Gráfico de Qualidade do Ar:** Visualize a variação da qualidade do ar ao longo dos meses.
+- **Gráfico de Umidade do Ar:** Veja como a umidade do ar varia durante o ano.
+- **Gráficos Combinados:** Compare a qualidade do ar e a umidade no mesmo gráfico.
+- **Gráfico de Qualidade do Ar por Umidade:** Verifique a relação entre a qualidade do ar e a umidade.
 
-O método começa com uma estimativa inicial de mês (geralmente 0) e itera várias vezes, ajustando a estimativa com base na diferença entre o valor desejado e o valor real da qualidade do ar. A derivada da função de qualidade do ar é usada para determinar a taxa de mudança da qualidade do ar em relação ao mês.
+### 3. Estimar Mês com Base em Valor Desejado
 
-### Limitações e Considerações
+Com essa função, você pode inserir um valor desejado de qualidade do ar (de 1 a 10) e o programa estimará o mês em que esse valor pode ser alcançado. A estimativa é baseada na taxa de mudança da qualidade do ar.
 
-É importante observar que a estimativa do mês é uma aproximação e depende da qualidade dos dados, da escolha do valor de `h` na função de derivada, do número de iterações e de outros fatores. Portanto, os resultados podem variar com base nas condições reais futuras.
+### 4. Estimar Meses com Base em Valores de 0 a 10
 
-Os usuários devem entender que essa estimativa é baseada em cálculos numéricos e tendências históricas dos dados. Recomenda-se que a estimativa seja interpretada como uma previsão aproximada, não como uma certeza absoluta.
+Esse recurso oferece uma estimativa dos meses em que a qualidade do ar poderia variar de 0 a 10. Ele fornece uma lista de valores de qualidade do ar desejados e os meses estimados para alcançá-los.
 
-### Exemplo de Uso
+### 5. Informar Região para o Banco de Dados
 
-```python
-valor_desejado = 5  # Substitua pelo valor desejado
-mes_estimado = self.estimar_mes_valor(valor_desejado)
-print(f"O mês estimado para alcançar a qualidade do ar desejada é: {mes_estimado}")
+Você pode inserir um CEP (Código de Endereçamento Postal) e o programa verificará informações relacionadas a essa região, como logradouro, bairro, cidade e estado.
+
+## Nova Implementação
+
+Recentemente, foi aprimorado o método de estimar o mês com base em um valor desejado de qualidade do ar. Agora, o programa utiliza métodos de cálculo mais precisos para determinar o mês estimado, considerando a taxa de mudança da qualidade do ar ao longo dos meses.
+
+## Requisitos
+
+Certifique-se de ter o Python instalado em sua máquina. Você também pode precisar instalar as seguintes bibliotecas:
+
+- matplotlib
+- numpy
+- requests
+
+Você pode instalá-las usando o seguinte comando:
+```bash
+pip install [nome da biblioteca]
 ```
+
 ## Créditos e integrantes
 - RM 98036 Henrique Pontes Olliveira
 - RM 98460 Felipe Capriotti da Silva Santos
 - RM 99679 Gustavo Kawamura Christofani
 - RM 550908 Vinicius Santos Yamashita de Farias
 - RM 99874 Rafael Carvalho Mattos
+
+## Finalidade do projeto
+Esse projeto foi desenvolvido pela Axion Green como parte de nossa iniciativa para promover uma melhor compreensão da qualidade do ar e seu impacto em nossa saúde e meio ambiente. Esperamos que essa ferramenta seja útil para você em sua busca por informações sobre qualidade do ar.
