@@ -1,57 +1,88 @@
 # Analisador de Qualidade do Ar - Axion Green
 
-Bem-vindo ao Analisador de Qualidade do Ar, uma ferramenta desenvolvida pela Axion Green para ajudar a monitorar e analisar a qualidade do ar e a umidade em diferentes meses do ano. O programa permite a inserção de dados mensais, visualização de gráficos informativos e estimativa de meses com base em valores de qualidade desejados.
+Bem-vindo ao Analisador de Qualidade do Ar da Axion Green. Esta ferramenta foi projetada para monitorar, analisar e estimar a qualidade do ar e a umidade ao longo do ano. Com uma variedade de funcionalidades, você pode facilmente inserir dados, visualizar gráficos informativos e estimar valores desejados.
 
 ## Funcionalidades
 
-### 1. Inserir Dados Mensais
+### 1. Inserção de Dados Mensais
 
-Você pode inserir os dados mensais de qualidade do ar e umidade utilizando o menu "Inserir Dados Mensais". Insira valores de 1 a 10 para a qualidade do ar e a umidade.
+Utilize o menu "Inserir Dados Mensais" para adicionar informações sobre a qualidade do ar e umidade de cada mês. Insira valores de 1 a 10 para representar a qualidade do ar e a umidade.
 
-### 2. Visualizar Gráficos
+### 2. Visualização de Gráficos
 
-O programa oferece diversos gráficos para visualizar os dados:
+Explore uma série de gráficos para visualizar seus dados:
 
-- **Gráfico de Qualidade do Ar:** Visualize a variação da qualidade do ar ao longo dos meses.
-- **Gráfico de Umidade do Ar:** Veja como a umidade do ar varia durante o ano.
-- **Gráficos Combinados:** Compare a qualidade do ar e a umidade no mesmo gráfico.
-- **Gráfico de Qualidade do Ar por Umidade:** Verifique a relação entre a qualidade do ar e a umidade.
+- **Qualidade do Ar ao Longo dos Meses:** Acompanhe as variações mensais da qualidade do ar.
+- **Variação da Umidade:** Observe como a umidade se altera durante o ano.
+- **Comparação Qualidade do Ar e Umidade:** Veja ambos os fatores em um único gráfico.
+- **Relação entre Qualidade do Ar e Umidade:** Analise a correlação entre essas variáveis.
 
-### 3. Estimar Mês com Base em Valor Desejado
+### 3. Estimativa do Mês com Base em Valor Desejado
 
-Com essa função, você pode inserir um valor desejado de qualidade do ar (de 1 a 10) e o programa estimará o mês em que esse valor pode ser alcançado. A estimativa é baseada na taxa de mudança da qualidade do ar.
+Digite um valor de qualidade do ar desejado (de 1 a 10) para prever o mês em que ele poderá ser alcançado. A estimativa leva em consideração a taxa de mudança da qualidade do ar.
 
-### 4. Estimar Meses com Base em Valores de 0 a 10
+### 4. Estimativa de Meses para Valores de 0 a 10
 
-Esse recurso oferece uma estimativa dos meses em que a qualidade do ar poderia variar de 0 a 10. Ele fornece uma lista de valores de qualidade do ar desejados e os meses estimados para alcançá-los.
+Receba uma estimativa dos meses para uma variedade de valores de qualidade do ar (0 a 10). Visualize os meses em que esses valores podem ocorrer.
 
-### 5. Informar Região para o Banco de Dados
+### 5. Informações da Região via CEP
 
-Você pode inserir um CEP (Código de Endereçamento Postal) e o programa verificará informações relacionadas a essa região, como logradouro, bairro, cidade e estado.
+Insira um CEP para acessar informações locais, como logradouro, bairro, cidade e estado.
 
 ## Nova Implementação
 
-Recentemente, foi aprimorado o método de estimar o mês com base em um valor desejado de qualidade do ar. Agora, o programa utiliza métodos de cálculo mais precisos para determinar o mês estimado, considerando a taxa de mudança da qualidade do ar ao longo dos meses.
+Aprimoramos o método de estimativa de mês para qualidade do ar, utilizando cálculos mais precisos baseados na derivada da série temporal da qualidade do ar. A derivada oferece insights sobre as mudanças ao longo do tempo, possibilitando uma estimativa mais precisa.
+
+Ao calcular a derivada da qualidade do ar em relação aos meses, identificamos períodos de aumento ou diminuição acentuados. Isso melhora a precisão da previsão para atingir valores desejados, considerando as tendências sazonais.
 
 ## Requisitos
 
-Certifique-se de ter o Python instalado em sua máquina. Você também pode precisar instalar as seguintes bibliotecas:
+Certifique-se de ter o Python instalado. Você pode precisar instalar as seguintes bibliotecas:
 
 - matplotlib
 - numpy
 - requests
 
-Você pode instalá-las usando o seguinte comando:
+Instale-as usando:
 ```bash
 pip install [nome da biblioteca]
 ```
+## Utilidade da Derivada
 
-## Créditos e integrantes
+A derivada ajuda a compreender as mudanças da qualidade do ar ao longo do tempo. Sua magnitude indica rapidez e direção da mudança. Por exemplo:
+
+- Derivada positiva: Melhoria ao longo do tempo.
+- Derivada negativa: Deterioração ao longo do tempo.
+- Magnitude reflete a velocidade da mudança.
+
+Ao visualizar o gráfico da derivada em relação aos meses, você identifica tendências e picos de mudança rápida. Isso apoia decisões em políticas ambientais e planejamento urbano.
+
+## Método de Newton para Estimar Mês
+
+Utilizamos o método de Newton para estimar o mês desejado. O método iterativo aproxima raízes de funções.
+
+### Funcionamento
+
+1. Calculamos a derivada da qualidade do ar ao longo dos meses.
+2. Iniciamos com um mês (por exemplo, 0) e iteramos para encontrar a raiz da função.
+3. Iterações continuam até encontrar a raiz ou atingir máximo de iterações.
+
+### Vantagens
+
+O método de Newton é eficiente para raízes de funções complexas. Considera a taxa de mudança, possibilitando estimativas precisas.
+
+### Limitações
+
+Pode não convergir se a função for complexa. Precisão depende do valor inicial.
+
+## Créditos e Integrantes
+
 - RM 98036 Henrique Pontes Olliveira
 - RM 98460 Felipe Capriotti da Silva Santos
 - RM 99679 Gustavo Kawamura Christofani
 - RM 550908 Vinicius Santos Yamashita de Farias
 - RM 99874 Rafael Carvalho Mattos
 
-## Finalidade do projeto
-Esse projeto foi desenvolvido pela Axion Green como parte de nossa iniciativa para promover uma melhor compreensão da qualidade do ar e seu impacto em nossa saúde e meio ambiente. Esperamos que essa ferramenta seja útil para você em sua busca por informações sobre qualidade do ar.
+## Finalidade do Projeto
+
+Desenvolvido pela Axion Green para compreender a qualidade do ar e seu impacto. Esperamos que essa ferramenta informe suas decisões sobre qualidade do ar.
