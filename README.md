@@ -60,6 +60,12 @@ pip install numpy
 ````
 6. Após isso, inicie o codigo novamente.
 
+## Exemplo de plotagem de grafico:
+![image](https://github.com/Pontessxx/Qualidade-de-ar/assets/126187491/c5e0bc61-b36a-42e8-a52d-c108b95c7989)
+![image](https://github.com/Pontessxx/Qualidade-de-ar/assets/126187491/0ae13b89-30b9-46c2-9e3d-d5b0f952679e)
+![image](https://github.com/Pontessxx/Qualidade-de-ar/assets/126187491/0baeb66f-9063-4d5c-a035-3936f9a7da46)
+![image](https://github.com/Pontessxx/Qualidade-de-ar/assets/126187491/befc8724-3dbb-4ac5-bb17-ae46b3664e0c)
+
 
 ## Licença
 
