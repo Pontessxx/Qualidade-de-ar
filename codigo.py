@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import requests
 import numpy as np
 class AirQualityAnalyzer:
+  #função para conseguir compartilhar os dados entre funções usando metodos __init__
     def __init__(self):
         self.dados_ar = []
         self.dados_umidade = []
@@ -9,6 +10,7 @@ class AirQualityAnalyzer:
         self.opcao = 0
 
     def exibir_menu(self):
+      #Menu inicialmente
         print('_' * 30)
         print('\n         AXION GREEN')
         print('_' * 30)
@@ -34,6 +36,7 @@ class AirQualityAnalyzer:
                 return led, buzzer
 
     def validar_input(self, prompt, valor_minimo, valor_maximo):
+      #tratamento de erro utilizando while try e except para tratar a mensagem de erro ao usuário
         while True:
             try:
                 valor = int(input(prompt))
@@ -45,6 +48,7 @@ class AirQualityAnalyzer:
                 print("Entrada inválida. Digite um número válido.")
 
     def inserir_dados(self):
+      #utilizei um for para cada mes no ano inserir os dados, classificalos e inserilos no array
          for i, mes in enumerate(self.meses):
             print(f'---  [{mes}]  ---')
             ar = self.validar_input(f'\nQualidade de ar: ', 1, 10)
@@ -56,10 +60,13 @@ class AirQualityAnalyzer:
             self.dados_umidade.append(umidade)
 
     def calcular_derivada(self, dados):
+      ''' variação entre valores adjacentes nos dados e divide pela variação entre os meses adjacentes,
+       o que resulta na taxa de mudança da qualidade do ar em relação aos meses. ''' 
         derivada = np.gradient(dados)
         return derivada
 
     def plotar_grafico_qualidade(self):
+      #aqui utiliza a biblioteca para plotar os graficos de qualidade de ar no ano e o grafico em barras
         plt.plot([ar for ar, _ in self.dados_ar], color='darkcyan', label='Qualidade do ar')
         plt.title('Qualidade do ar - Anual')
         plt.xlabel('Meses')
@@ -69,10 +76,10 @@ class AirQualityAnalyzer:
         plt.legend()
         
         plt.show()
-        self.plotar_grafico_barras()
+        self.plotar_grafico_barras()  #chama a funcao de plot do grafico de barras
 
     def plotar_grafico_barras(self):
-        classificacoes = {'VERDE': 0, 'AMARELO': 0, 'VERMELHO': 0}  # Corrigir as classificações aqui
+        classificacoes = {'VERDE': 0, 'AMARELO': 0, 'VERMELHO': 0}  # array para guardar a qualidade durante o ano
 
         for _, led in self.dados_ar:
             classificacoes[led] += 1
@@ -88,6 +95,7 @@ class AirQualityAnalyzer:
     
 
     def plotar_grafico_umidade(self):
+      #plot do grafico da umnidade do ar em relação aos meses
         plt.plot(self.dados_umidade, color='blue', label='Umidade do ar')
         plt.title('Umidade do ar - Anual')
         plt.xlabel('Meses')
@@ -98,6 +106,7 @@ class AirQualityAnalyzer:
         plt.show()
 
     def plotar_graficos_combinados(self):
+      #junta o grafico de qualidade de ar e a umidade
         plt.plot([ar for ar, _ in self.dados_ar], color='darkcyan', label='Qualidade do ar')
         plt.plot(self.dados_umidade, color='blue', label='Umidade do ar')
         plt.title('Qualidade e Umidade do ar - Anual')
@@ -108,6 +117,7 @@ class AirQualityAnalyzer:
         plt.show()
 
     def plotar_grafico_qualidade_por_umidade(self):
+      #grafico de despersão para verificar a "reta" crescente/decrescente ao ano
         qualidade_numeros = [ar for ar, _ in self.dados_ar]
         umidade = self.dados_umidade
 
@@ -121,6 +131,7 @@ class AirQualityAnalyzer:
         plt.show()
 
     def plotar_grafico_derivada_qualidade(self):
+      #pega os valores calculados da derivada e plota num gráfico
         qualidade_numeros = [ar for ar, _ in self.dados_ar]
         derivada_ar = self.calcular_derivada(qualidade_numeros)
 
@@ -156,6 +167,7 @@ class AirQualityAnalyzer:
         self.verificar_cep(cep)
 
     def verificar_cep(self, cep):
+      #verifica cep com uma API
         url = f"https://viacep.com.br/ws/{cep}/json/"
         response = requests.get(url)
 
