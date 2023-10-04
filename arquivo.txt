@@ -1,14 +1,15 @@
-Analisador de Qualidade do Ar - Axion Green
+# Analisador de Qualidade do Ar - Axion Green
+
 Bem-vindo ao Analisador de Qualidade do Ar da Axion Green. Esta ferramenta foi projetada para monitorar, analisar e estimar a qualidade do ar e a umidade ao longo do ano. Com uma variedade de funcionalidades, você pode facilmente inserir dados, visualizar gráficos informativos e estimar valores desejados.
 
-Créditos e Integrantes
-RM 98036 Henrique Pontes Olliveira
-RM 98460 Felipe Capriotti da Silva Santos
-RM 99679 Gustavo Kawamura Christofani
-RM 550908 Vinicius Santos Yamashita de Farias
-RM 99874 Rafael Carvalho Mattos
+## Créditos e Integrantes
+- RM 98036 Henrique Pontes Olliveira
+- RM 98460 Felipe Capriotti da Silva Santos
+- RM 99679 Gustavo Kawamura Christofani
+- RM 550908 Vinicius Santos Yamashita de Farias
+- RM 99874 Rafael Carvalho Mattos
 
-Funcionalidades Implementadas:
+## Funcionalidades Implementadas
 - Inserir os dados mensais de qualidade do ar e umidade.
 - Exibir gráfico da qualidade do ar ao longo do ano.
 - Exibir gráfico da umidade do ar ao longo do ano.
@@ -19,13 +20,13 @@ Funcionalidades Implementadas:
 - Estimar meses com base em valores de 0 a 10.
 - Informar a região através do CEP e exibir informações do endereço.
 
-Conceitos Utilizados:
+## Conceitos Utilizados
 - Entrada de dados através de input().
 - Processamento de dados usando estruturas condicionais e de repetição.
 - Armazenamento de dados em listas e dicionários.
 - Funções criadas para cada funcionalidade principal.
 
-Validações:
+## Validações
 - Validar entrada de dados para qualidade do ar e umidade (entre 1 e 10).
 - Validar valor desejado para estimar o mês (entre 1 e 10).
 - Verificar se o mês estimado está dentro do intervalo válido.
