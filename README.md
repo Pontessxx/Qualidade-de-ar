@@ -42,11 +42,15 @@ Certifique-se de ter o Python instalado. Você pode precisar instalar as seguint
 - matplotlib
 - numpy
 - requests
+- pandas
 
 Instale-as usando:
 ```bash
 pip install [nome da biblioteca]
+
 ```
+
+
 ## Utilidade da Derivada
 
 A derivada ajuda a compreender as mudanças da qualidade do ar ao longo do tempo. Sua magnitude indica rapidez e direção da mudança. Por exemplo:
@@ -75,6 +79,12 @@ O método de Newton é eficiente para raízes de funções complexas. Considera 
 
 Pode não convergir se a função for complexa. Precisão depende do valor inicial.
 
+## Uso do Pandas e Docstrings
+
+Neste projeto, utilizamos a biblioteca Pandas para manipulação e análise de dados. O Pandas nos permite criar DataFrames para organizar os dados mensais e calcular médias anuais.
+
+As docstrings foram incluídas para descrever a funcionalidade de cada função e método. Isso torna o código mais legível e facilita a compreensão das operações realizadas em cada parte do programa.
+
 ## Créditos e Integrantes
 
 - RM 98036 Henrique Pontes Olliveira
@@ -83,6 +93,4 @@ Pode não convergir se a função for complexa. Precisão depende do valor inici
 - RM 550908 Vinicius Santos Yamashita de Farias
 - RM 99874 Rafael Carvalho Mattos
 
-## Finalidade do Projeto
 
-Desenvolvido pela Axion Green para compreender a qualidade do ar e seu impacto. Esperamos que essa ferramenta informe suas decisões sobre qualidade do ar.
